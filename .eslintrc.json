@@ -27,7 +27,7 @@
         "react/jsx-props-no-spreading": "off",
         "jsx-a11y/label-has-associated-control": "off",
         "react/require-default-props": "off",
-
+        "quotes" : "off"
     },
     "settings": {
         "import/resolver": {

@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { useForm } from 'react-hook-form';
-import Headers from './Header';
-import './styles.css';
+import * as React from "react";
+import { useForm } from "react-hook-form";
+import Headers from "./Header";
+import "./styles.css";
 
 let renderCount = 0;
 
@@ -10,7 +10,7 @@ type FormValues = {
   lastName: string;
   age: number;
   gender: string;
-  developer: string;
+  developer: boolean;
 };
 
 export default function App() {
@@ -33,30 +33,30 @@ export default function App() {
       />
       <label htmlFor="firstName">First Name:</label>
       <input
-        {...register('firstName', { required: 'This is required.' })}
+        {...register("firstName", { required: "This is required." })}
         id="firstName"
       />
       {errors.firstName && <p>{errors.firstName.message}</p>}
 
       <label htmlFor="lastName">Last Name:</label>
-      <input {...register('lastName', { required: true, minLength: 5 })} />
+      <input {...register("lastName", { required: true, minLength: 5 })} />
 
       <label htmlFor="age">Age</label>
       <input
         type="number"
-        {...register('age', { valueAsNumber: true })}
+        {...register("age", { valueAsNumber: true })}
         id="age"
       />
 
       <label htmlFor="gender" />
-      <select {...register('gender')} id="gender">
+      <select {...register("gender")} id="gender">
         <option value="">Select...</option>
         <option value="male">male</option>
         <option value="female">female</option>
       </select>
 
       <label htmlFor="developer">Are you a developer?</label>
-      <input {...register('developer')} value="yes" type="checkbox" />
+      <input {...register("developer")} value="yes" type="checkbox" />
 
       <input type="submit" />
     </form>
